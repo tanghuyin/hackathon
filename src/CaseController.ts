@@ -8,7 +8,6 @@ export class CaseController {
 
     @Post()
     createCase(@Body() body: Case) {
-        const response = this.caseService.createCase(body);
-        return "ok"
+        return this.caseService.createCase(body);
     }
 } 
