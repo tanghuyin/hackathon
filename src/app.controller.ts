@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, Put } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Case } from './Case';
 
@@ -11,8 +11,17 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Post()
-  handleCreatedCaseWebhook(@Body() body: Case): string {
-    return this.appService.handleCreatedCaseWebhook(body);
+  @Post("/create")
+  async handleCreatedCaseWebhook(@Body() body: Case) {
+    console.log("create webhook triggered");
+    const data = await this.appService.handleCreatedCaseWebhook(body);
+    return data;
+  }
+
+  @Post("/update")
+  async handleUpdateCaseWebhook(@Body() body: Case) {
+    console.log("update webhook triggered");
+    const data = await this.appService.handleUpdateCaseWebhook(body);
+    return data;
   }
 }

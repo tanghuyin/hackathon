@@ -28,6 +28,7 @@
     "@types/qs": "^6.9.7",
     "axios": "^0.25.0",
     "cache-manager": "^3.6.0",
+    "firebase": "^9.4.1",
     "qs": "^6.10.3",
     "redis": "^4.0.3",
     "reflect-metadata": "^0.1.13",

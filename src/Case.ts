@@ -1,10 +1,12 @@
 export interface Case {
-    id: number;
+    id?: string
+    email: string;
     category: {
         id: number;
         name: string;
     }
-    longitude: number,
-    latitude: number;
     comments: string;
+    time: Date;
+    longitude: number;
+    latitude: number;
 }
