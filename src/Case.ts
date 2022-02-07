@@ -4,6 +4,7 @@ export interface Case {
         id: number;
         name: string;
     }
-    latitude: string;
+    longitude: number,
+    latitude: number;
     comments: string;
 }
