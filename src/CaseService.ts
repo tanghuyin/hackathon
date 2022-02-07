@@ -33,6 +33,7 @@ export class CaseService {
             console.log(e);
         });
         console.log(response)
+        return "Successfully Create a Case"
     }
 
 }
